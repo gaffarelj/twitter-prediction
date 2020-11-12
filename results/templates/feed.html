@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{username}'s feed</title>
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap');
+		html, body {
+			overflow-y: hidden;
+			font-family: 'Roboto', sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+		section {
+			height: 100vh;
+			overflow-y: scroll;
+			width: 50%;
+		}
+		section#latest {
+			border-left: 1px #212121 solid;
+			margin-top: -100vh;
+			margin-left: 50%;
+		}
+		article {
+			margin: 1em;
+			border-bottom: 1px #212121 dashed;
+			padding-bottom: 1em;
+		}
+		article:first-of-type {
+			margin-top: 4em;
+		}
+		h1 {
+			font-family: 'Montserrat', sans-serif;
+			font-weight: normal;
+			font-size: 1.5em;
+			padding: 0.6em;
+			text-decoration: underline;
+			position: fixed;
+			background: #fff;
+			width: 46.5%;
+			margin: 0;
+		}
+		h2 {
+			font-size: 1.2em;
+		}
+		h2 span {
+			font-weight: normal;
+		}
+		p {
+			font-size: 1.1em;
+		}
+		i {
+			font-style: normal;
+		}
+		article h2 a {
+			font-weight: normal;
+			color: #393939;
+		}
+	</style>
+</head>
+<body>
+	<section id="feed">
+		<h1>{username}'s Twitter feed (by {orderf}):</h1>
+		{feed_tweets}
+	</section>
+	<section id="latest">
+		<h1>{username}'s latest actions (by {orderl}):</h1>
+		{latest_tweets}
+	</section>
+</body>
+</html>

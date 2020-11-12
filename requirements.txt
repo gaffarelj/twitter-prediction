@@ -1,0 +1,6 @@
+numpy==1.16.5
+requests
+bs4
+requests_oauthlib
+lxml
+tensorflow==2.0.0-alpha0
